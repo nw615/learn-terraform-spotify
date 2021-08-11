@@ -21,14 +21,14 @@ resource "spotify_playlist" "playlist" {
   public      = true
 
   tracks = flatten([
-    data.spotify_search_track.by_artist1.tracks[*].id,
+    data.spotify_search_track.by_artist.tracks[*].id,
     data.spotify_search_track.by_artist2.tracks[*].id,
     data.spotify_search_track.by_artist3.tracks[*].id,
     data.spotify_search_track.by_artist4.tracks[*].id,
   ])
 }
 
-data "spotify_search_track" "by_artist1" {
+data "spotify_search_track" "by_artist" {
   artists = ["TUBE"]
   limit = 10
 }
@@ -49,7 +49,7 @@ data "spotify_search_track" "by_artist4" {
 }
 
 output "tracks" {
-  value = data.spotify_search_track.by_artist1.tracks
+  value = data.spotify_search_track.by_artist.tracks
 }
 
 output "tracks2" {
