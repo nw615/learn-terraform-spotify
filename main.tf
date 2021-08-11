@@ -39,12 +39,12 @@ data "spotify_search_track" "by_artist2" {
 }
 
 data "spotify_search_track" "by_artist3" {
-  artists = ["大黒摩季"]
+  artists = ["Ado"]
   limit = 10
 }
 
 data "spotify_search_track" "by_artist4" {
-  artists = ["郷ひろみ"]
+  artists = ["YOASOBI"]
   limit = 10
 }
 
