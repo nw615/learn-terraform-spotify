@@ -39,7 +39,7 @@ data "spotify_search_track" "by_artist2" {
 }
 
 data "spotify_search_track" "by_artist3" {
-  artist = "ヨルシカ"
+  artist = "Ado"
   limit = 10
 }
 
