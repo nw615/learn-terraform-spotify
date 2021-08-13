@@ -49,17 +49,10 @@ data "spotify_search_track" "by_artist4" {
 }
 
 output "tracks" {
-  value = data.spotify_search_track.by_artist.tracks
-}
-
-output "tracks2" {
-  value = data.spotify_search_track.by_artist2.tracks
-}
-
-output "tracks3" {
-  value = data.spotify_search_track.by_artist3.tracks
-}
-
-output "tracks4" {
-  value = data.spotify_search_track.by_artist4.tracks
+  value = [
+           data.spotify_search_track.by_artist.tracks,
+           data.spotify_search_track.by_artist2.tracks,
+           data.spotify_search_track.by_artist3.tracks,
+           data.spotify_search_track.by_artist4.tracks,
+          ]
 }
