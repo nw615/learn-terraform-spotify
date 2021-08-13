@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     spotify = {
-      version = "~> 0.1.5"
+      version = "~> 0.2.0"
       source  = "conradludgate/spotify"
     }
   }
@@ -29,22 +29,22 @@ resource "spotify_playlist" "playlist" {
 }
 
 data "spotify_search_track" "by_artist" {
-  artists = ["TUBE"]
+  artist = "TUBE"
   limit = 10
 }
 
 data "spotify_search_track" "by_artist2" {
-  artists = ["サザンオールスターズ"]
+  artist = "サザンオールスターズ"
   limit = 10
 }
 
 data "spotify_search_track" "by_artist3" {
-  artists = ["Ado"]
+  artist = "Bz"
   limit = 10
 }
 
 data "spotify_search_track" "by_artist4" {
-  artists = ["YOASOBI"]
+  artist = "YOASOBI"
   limit = 10
 }
 
